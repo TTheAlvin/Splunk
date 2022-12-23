@@ -1,0 +1,8 @@
+FROM centos:7.7.1908
+MAINTAINER dynasafe:di:alvin
+
+RUN cat /usr/share/zoneinfo/Asia/Taipei > /etc/localtime
+ADD gg.tar /tmp
+WORKDIR /tmp/log
+
+CMD ["/tmp/log/gg.sh"]
